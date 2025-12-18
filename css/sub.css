@@ -1,0 +1,188 @@
+body{
+  background-color: #121227;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+header h1{
+  text-transform: capitalize;
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 68px;
+  /* color: rgb(172, 39, 39); */
+  color: rgb(214, 169, 43);
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 3s;
+  transform: scale(0);
+}
+
+@keyframes zoomIn {
+  70% {transform: scale(1);}
+  85% {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+
+
+.tree{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.star{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  animation: -star infinite 2s ease-in-out;
+  animation-delay: 2.3s;
+}
+@keyframes -star{
+  0% {transform: rotate(0deg);}
+  40% {transform: rotate(10deg); opacity: 1;}
+  60% {transform: rotate(0deg); opacity: 0.3;}
+  80% {transform: rotate(-10deg); opacity: 0.8;}
+  100% {transform: rotate(0deg); opacity: 0;}
+}
+.star::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(255, 250, 205) 0%, transparent 70%);
+}
+
+.star .line{
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: center center;
+}
+.line:nth-child(2) {transform: rotate(45deg);}
+.line:nth-child(3) {transform: rotate(-45deg);}
+.line:nth-child(4) {transform: rotate(-90deg);}
+
+
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  height: 560px;
+  text-transform: uppercase;
+}
+.text p{
+  display: block;
+  height: 40px;
+  background-color: #149449;
+  color: #121227;
+  text-align: right;
+  font-size: 36px;
+  font-weight: bold;
+  animation: -fade 2s forwards;
+  opacity: 0;
+  box-shadow: 0 0 10px #148142;
+  border-radius: 5px;
+}
+@keyframes -fade{
+  0% {transform: translateY(-500px);}
+  85% {transform: translateY(5px);}
+  100% {transform: translateY(0); opacity: 1;}
+}
+.text p:nth-child(1){
+  width: 40%;
+  rotate: -15deg;
+  animation-delay: 1.7s;
+}
+.text p:nth-child(2){
+  width: 50%;
+  rotate: 6deg;
+  animation-delay: 1.5s;
+}
+.text p:nth-child(3){
+  width: 60%;
+  rotate: -5deg;
+  animation-delay: 1.2s;
+}
+.text p:nth-child(4){
+  width: 70%;
+  rotate: 5deg;
+  animation-delay: 0.9s;
+}
+.text p:nth-child(5){
+  width: 80%;
+  rotate: -4deg;
+  animation-delay: 0.6s;
+}
+.text p:nth-child(6){
+  width: 90%;
+  rotate: 3deg;
+  animation-delay: 0.3s;
+  color: rgb(255, 255, 255);
+  cursor:pointer;
+  position: relative;
+}
+.text p:nth-child(7){
+  width: 100%;
+}
+
+.text p:nth-child(6)::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url(/img/5.png);
+  background-size: cover;
+  transition: 0.1s;
+  opacity: 0;
+}
+.text p:nth-child(6):hover::before{
+  opacity: 1;
+}
+
+
+
+
+
+.snow{
+  width: 100%;
+  height: 100vh;
+  border: 1px solid red;
+  position: relative;
+}
+
+.snow span{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+
+다음주 월요일 이후로 편하신 때에 불러주시면 될 것 같습니다. 제안 해주신 날짜 중에서는 수요일 오전 11시에 가능합니다!
